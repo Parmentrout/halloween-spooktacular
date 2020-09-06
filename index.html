@@ -2,11 +2,11 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Locked In Brewery</title>
+        <title>Halloween Spooktacular</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="icon.png">
         <link href="./styles.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/df99f802be.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
@@ -14,14 +14,16 @@
             <span class="navbar-brand mb-0 h1"><img id="key-logo" class="nav-icon" src="icon.png"></span>
         </nav>
         <div class="container">
-            <div class="jumbotron danone-jumbo">
-                <h1>A Mystery is Brewing…
+            <div class="jumbotron trout-jumbo">
+                <h1>A Halloween Spooktacular!
                 </h1>
-                <p>
-                  After discovering a secret wormhole in your local brewery, you now find yourself trapped, in an alternate dimension. In this 
-                  timeline the brewery only serves domestic light beer (audible gasp here)!  
-                  Solve each puzzle below to unlock a new clue, leading to your eventual escape.  But hurry, you only have 
-                  30 minutes to escape before the wormhole closes and you are trapped with nothing but this swill for eternity!!
+                <p>                 
+                  Jasper the Unassuming Ghost has always stayed to himself and tried to keep out of trouble. 
+                  However, after attending a crazy ghost party he suddenly finds himself locked in a spooky graveyard.  
+                  To make matters worse, it’s also Halloween!
+                  <br><br>
+                  <!-- Solve all 3 puzzles to help Jasper move through the Graveyard, avoiding any nefarious encounters along the way.
+                    After all 3 are solved, punch in the final combination to get him out of there! -->
                 </p>
             </div>
         </div>
@@ -62,36 +64,30 @@
             </div>
           </div>
             <div class="row">
-              <div class="col-sm mb-4">
-                  <i id="lock1" class="fa fa-lock lock large-locked text-center"></i>
-                  <div class="form-inline justify-content-center mid-lock">
+              <div class="col"></div>
+              <div class="col-6">
+                <h4>Puzzle 1</h4>
+                <div class="description">While stumbling through the cemetary, Jasper runs into the ghost of Captain Dirty Beard.
+                   The Grand Captain will guide your way, but first you must solve Puzzle 1.</div>
+              </div>
+              <div class="col"></div>
+            </div>
+            <div class="row mt-4">
+              <div class="col"></div>
+              <div class="col mb-4">
+                <i class="fas fa-ghost giphy floating text-center"></i>
+              </div>
+              <div class="col mb-4">
+                  <i class="fas fa-skull-crossbones giphy text-center"></i>
+                  <div class="form-inline justify-content-center gimme-space-top">
                     <input id="door1-code" type="text" class="form-control mr-1 key-input" placeholder="Puzzle 1">
                   </div>
-                  <div class="form-inline justify-content-center gimme-lotta-space-top">
+                  <div class="form-inline justify-content-center mt-2">
                     <button id="door1-form" type="submit" class="btn btn-sm btn-primary"><span class="target">Unlock!</span></button>
                   </div>
                   <p id="door1Error" class="text-center error-message mt-sm-1">Incorrect code!</p>
               </div>
-              <div class="col-sm mb-4">
-                <i id="lock2" class="fa fa-lock lock large-locked text-center"></i>
-                <div class="form-inline justify-content-center mid-lock">
-                  <input id="door2-code" type="text" class="form-control mr-1 key-input" placeholder="Puzzle 2">
-                </div>
-                <div class="form-inline justify-content-center gimme-lotta-space-top">
-                  <button id="door2-form" type="submit" class="btn btn-sm btn-primary"><span class="target">Unlock!</span></button>
-                </div>
-                <p id="door2Error" class="text-center error-message mt-sm-1">Incorrect code!</p>
-              </div>
-              <div class="col-sm mb-4">
-                <i id="lock3" class="fa fa-lock lock large-locked text-center"></i>
-                <div class="form-inline justify-content-center mid-lock">
-                  <input id="door3-code" type="text" class="form-control mr-1 key-input" placeholder="Puzzle 3">
-                </div>
-                <div class="form-inline justify-content-center gimme-lotta-space-top">
-                  <button id="door3-form" type="submit" class="btn btn-sm btn-primary"><span class="target">Unlock!</span></button>
-                </div>
-                <p id="door3Error" class="text-center error-message mt-sm-1">Incorrect code!</p>
-              </div>
+              <div class="col"></div>
             </div>
             <div class="row mt-4">
               <div class = "col">
@@ -100,7 +96,6 @@
             </div>
            
         </div>
-
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
