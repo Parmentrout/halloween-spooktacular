@@ -14,7 +14,7 @@ body{
   color: white;
   font-weight: bold;
   padding-top: 10px !important;
-  padding-bottom: 10px !important;
+  padding-bottom: 0px !important;
 }
 
 .description {
@@ -58,6 +58,12 @@ body{
 
 .gimme-lotta-space-top {
   margin-top: 50px;
+}
+
+#fixed-div {
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 
 /* Go float yourself */
