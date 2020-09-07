@@ -7,12 +7,15 @@
         <link rel="icon" type="image/x-icon" href="icon.png">
         <link href="./styles.css" rel="stylesheet">
         <script src="https://kit.fontawesome.com/df99f802be.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
       <img src="spiderweb-corner-right.png" id="fixed-div">
         <nav class="navbar">
+           <a href="http://armentroutmysteries.com">
             <span class="navbar-brand mb-0 h1"><img id="key-logo" class="nav-icon" src="icon.png"></span>
+          </a>
         </nav>
         <div class="container">
             <div class="jumbotron trout-jumbo">
@@ -64,6 +67,7 @@
               </div>
             </div>
           </div>
+          <div id="puzzle1-container" class="sliding-container">
             <div class="row">
               <div class="col"></div>
               <div class="col-sm-8">
@@ -90,6 +94,76 @@
               </div>
               <div class="col"></div>
             </div>
+          </div>
+
+          <div id="puzzle2-container" class="sliding-container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col-sm-8">
+                <h4>Puzzle 2</h4>
+                <div class="description">Correct! The good captain leads you through the cemetery.
+                  But before you get too far, you run right into a pungent witch!
+                  <br>
+                  She cackles in the moonlight and forces you to solve Puzzle 2 before you are allowed to pass!
+                </div>
+              </div>
+              <div class="col"></div>
+            </div>
+            <div class="row mt-4">
+              <div class="col"></div>
+              <div class="col mb-4">
+                <i class="fas fa-ghost giphy floating text-center"></i>
+              </div>
+              <div class="col mb-4">
+                  <i class="fas fa-broom giphy text-center"></i>
+                  <div class="form-inline justify-content-center gimme-space-top">
+                    <input id="door2-code" type="text" class="form-control mr-1 key-input" placeholder="Puzzle 2">
+                  </div>
+                  <div class="form-inline justify-content-center mt-2">
+                    <button id="door2-form" type="submit" class="btn btn-sm btn-primary"><span class="target">Unlock!</span></button>
+                  </div>
+                  <p id="door2Error" class="text-center error-message mt-sm-1">Incorrect code!</p>
+              </div>
+              <div class="col"></div>
+            </div>
+          </div>
+
+          <div id="puzzle3-container" class="sliding-container">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col-sm-8">
+                <h4>Puzzle 3</h4>
+                <div class="description">Phew! You made it past the smelly witch.  For a ghost this is turning into quite the adventure.
+                  <br>
+                  Luckily, you can see the gate ahead. You start to float over before a giant spider blocks your path!
+                  Apparently, everyone at this cemetery really like puzzles because you must solve one more before you can make it through to the gate.
+                </div>
+              </div>
+              <div class="col"></div>
+            </div>
+            <div class="row mt-4">
+              <div class="col"></div>
+              <div class="col mb-4">
+                <i class="fas fa-ghost giphy floating text-center"></i>
+              </div>
+              <div class="col mb-4">
+                  <i class="fas fa-spider giphy text-center"></i>
+                  <div class="form-inline justify-content-center gimme-space-top">
+                    <input id="door3-code" type="text" class="form-control mr-1 key-input" placeholder="Puzzle 3">
+                  </div>
+                  <div class="form-inline justify-content-center mt-2">
+                    <button id="door3-form" type="submit" class="btn btn-sm btn-primary"><span class="target">Unlock!</span></button>
+                  </div>
+                  <p id="door3Error" class="text-center error-message mt-sm-1">Incorrect code!</p>
+              </div>
+              <div class="col"></div>
+            </div>
+          </div>
+
+          <div id="final-puzzle" class="sliding-container">
+            Final puzzle
+          </div>
+
             <div class="row mt-4">
               <div class = "col">
                 <p class="pull-right footer-text">Brought to you by <a href="http://armentroutmysteries.com">Armentrout Mysteries</a></p>
