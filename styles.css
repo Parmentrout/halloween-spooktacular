@@ -82,6 +82,10 @@ body{
   right: 0;
 }
 
+.text-black {
+  color: black !important;
+}
+
 /* Go float yourself */
 .floating {  
   animation-name: floating;
