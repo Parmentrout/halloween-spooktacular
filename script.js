@@ -1,39 +1,31 @@
 $(() => {
+   //$('#puzzle1-container').hide();
    $('#puzzle2-container').hide();
    $('#puzzle3-container').hide();
-   $('#final-puzzle').hide();
+   $('#final-container').hide();
+   $('#dancing-wizard').hide();
     hideErrors();
-    // If you are reading this, it is cheating.  I'm not mad, just disappointed...
+    // If you are reading this, it is cheating.  I'm not mad, just disappointed... 6159443664
     const doorData = [{
       number: 1,
-      password: 'test1',
+      password: 'ghostbusters',
       solved: false
     },
     {
       number: 2,
-      password: 'test2',
+      password: 'beetlejuice',
       solved: false
     },
     {
       number: 3,
-      password: 'test3',
+      password: 'ghost in the graveyard',
+      solved: false
+    }, 
+    {
+      number: 4,
+      password: 'ghost',
       solved: false
     }];
-
-    // function unlock(element) {
-    //   element.classList.toggle("fa-lock");
-    //   element.classList.toggle("fa-unlock-alt");
-
-    //   element.classList.toggle("large-locked");
-    //   element.classList.toggle("large-unlocked");
-    // }
-
-    // for (let door of doorData) {
-    //   $(`#door${door.number}-form`).click((event) => {
-    //     console.log('Clicked');
-    //     openDoor(door);
-    //   });
-    // }
 
     $('#door1-form').click(e => {
       const solved = openDoor(doorData[0]);
@@ -52,10 +44,18 @@ $(() => {
     });
 
     $('#door3-form').click(e => {
-      const solved = openDoor(doorData[1]);
+      const solved = openDoor(doorData[2]);
       if (solved) {
         $('#puzzle3-container').hide();
-        $('#final-puzzle').show();
+        $('#final-container').show();
+      }
+    });
+
+    $('#final-form').click(e => {
+      const solved = openDoor(doorData[3]);
+      if (solved) {
+        $('#final-container').hide();
+        $('#dancing-wizard').show();
       }
     });
 
@@ -85,5 +85,6 @@ $(() => {
       $('#door1Error').hide();
       $('#door2Error').hide();
       $('#door3Error').hide();
+      $('#finalError').hide();
     }
 })

@@ -48,6 +48,10 @@ body{
   padding-top: 73px;
 }
 
+.sticky-note {
+  max-width: 300px !important;
+}
+
 .gimme-space-top {
   margin-top: 25px;
 }
@@ -84,6 +88,10 @@ body{
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+}
+
+.dancing_wizard {
+  max-height: 300px;
 }
 
 @keyframes floating {
