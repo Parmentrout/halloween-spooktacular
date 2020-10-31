@@ -9,6 +9,9 @@ body{
   max-height: 100px;;
 }
 
+#emailModal {
+  color: black !important;
+}
 .trout-jumbo {
   background-color: transparent !important;
   color: white;

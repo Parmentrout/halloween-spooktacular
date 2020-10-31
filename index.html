@@ -7,6 +7,7 @@
         <link rel="icon" type="image/x-icon" href="icon.png">
         <link href="./styles.css" rel="stylesheet">
         <script src="https://kit.fontawesome.com/df99f802be.js" crossorigin="anonymous"></script>
+        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
@@ -107,7 +108,7 @@
                 <div class="description">Phew! You made it past the smelly witch.  For an unassuming ghost this is turning into quite the adventure.
                   <br>
                   Luckily, you can see the gate ahead. You start to float over before a giant spider blocks your path!
-                  Apparently, everyone at this cemetery really like puzzles because you must solve one more before you can make it through to the gate.
+                  He wants to play a final Halloween Game (popular with children).  Solve puzzle 3 and write the name of the game below to pass!
                 </div>
               </div>
               <div class="col"></div>
@@ -180,6 +181,7 @@
                 <div class="description text-center">
                   You have escaped the graveyard!  Thanks for playing the Armentrout Mysteries Halloween Spooktacular!
                 </div>
+                <p>Time spent: <b><span id="totalTime"></span></b></p>
                 <br><br>
                 <img class="dancing_wizard" src="ghost_wizard.gif">
               </div>
@@ -194,6 +196,31 @@
            
         </div>
 
+        <div id="emailModal" class="modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header"><h4 class="modal-title">Login to get started!</h4></div>
+              <div class="modal-body">
+                <h5>Thank you for playing the greatest Spooktacular of 2020!  Please input your email below:
+                </h5>
+                <hr>
+                <form id="loginForm" class="mt-2" onsubmit="return false;">
+                  <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input id="emailInput" type="email" class="form-control" placeholder="Enter email" id="email" required>
+                  </div>
+                  <div class="form-group form-check">
+                    <label class="form-check-label">
+                      <input id="optInInput" class="form-check-input" type="checkbox" checked> I would like to receive updates about exciting new escape rooms
+                    </label>
+                  </div>
+                  <button id="sessionSubmit" type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -204,7 +231,8 @@
                 </button>
               </div>
               <div class="modal-body text-black">
-
+  
+                
                <!-- Accordian hints in here -->
                <div class="accordion" id="accordionExample">
                 <div class="card">
