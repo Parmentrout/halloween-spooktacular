@@ -34,7 +34,7 @@ $(() => {
    $('#final-container').hide();
    $('#dancing-wizard').hide();
     hideErrors();
-    // If you are reading this, it is cheating.  I'm not mad, just disappointed... 6159443664
+    // If you are reading this, it is cheating.  I'm not mad, just disappointed...
     const doorData = [{
       number: 1,
       password: 'ghostbusters',
@@ -47,7 +47,7 @@ $(() => {
     },
     {
       number: 3,
-      password: 'ghost in the graveyard',
+      password: 'ghostinthegraveyard',
       solved: false
     }, 
     {
@@ -94,9 +94,10 @@ $(() => {
 
     function openDoor(door) {
       console.log('open door');
-      let password = $(`#door${door.number}-code`).first().val().toLowerCase();
+      let lower = $(`#door${door.number}-code`).first().val().toLowerCase();
+      let password = lower.split(' ').join('');
 
-      if (password === door.password) {
+      if ((password === door.password)) {
         door.solved = true;
         hideError(door.number);
       } else {
@@ -124,6 +125,7 @@ $(() => {
 
     function saveData(event) {
       const payload = `{
+        "puzzle": "${sessionKey}",
         "email": "${sessionData.email}",
         "company": "${sessionData.company}",
         "optIn": ${sessionData.optIn},
@@ -132,7 +134,7 @@ $(() => {
       }`;
       
       var params = {
-        FunctionName: 'mystery-results-put', // the lambda function we are going to invoke
+        FunctionName: 'mystery-results-v2-put', // the lambda function we are going to invoke
         InvocationType: 'RequestResponse',
         Payload: payload
       };
