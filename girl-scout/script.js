@@ -1,3 +1,16 @@
+const answer1 = new SlotMachine(document.querySelector('#clue1'), {
+  active: 0,
+  auto: false
+});
+const answer2 = new SlotMachine(document.querySelector('#clue2'), {
+  active: 0,
+  auto: false
+});
+const answer3 = new SlotMachine(document.querySelector('#clue3'), {
+  active: 0,
+  auto: false
+});
+
 AWS.config.region = 'us-east-1';
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
   IdentityPoolId: 'us-east-1:687b1ef2-20a7-4a7b-908a-e23815ac0c87'
@@ -8,12 +21,12 @@ const params = {
   TableName: "mystery-results",
   Item: event
 };
-const sessionKey = 'spookyMystery';
+const sessionKey = 'girlScoutMystery';
 
 $(() => {
    //$('#puzzle1-container').hide();
-
    let sessionData = getSessionData();
+   initializeCryptex();
    if (!sessionData) {
      $('#sessionSubmit').click((event) => {
        const email = $('#emailInput').val();
@@ -37,29 +50,24 @@ $(() => {
     // If you are reading this, it is cheating.  I'm not mad, just disappointed...
     const doorData = [{
       number: 1,
-      password: 'ghostbusters',
+      password: 'thinmints',
       solved: false
     },
     {
       number: 2,
-      password: 'beetlejuice',
+      password: 'smores',
       solved: false
     },
     {
       number: 3,
-      password: 'ghostinthegraveyard',
-      solved: false
-    }, 
-    {
-      number: 4,
-      password: 'ghost',
+      password: 'samoa',
       solved: false
     }];
 
     $('#door1-form').click(e => {
       const solved = openDoor(doorData[0]);
       if (solved) {
-        saveData('Dirty Beard Solved');
+        saveData('Door 1 open');
         $('#puzzle1-container').hide();
         $('#puzzle2-container').show();
       }
@@ -83,18 +91,49 @@ $(() => {
       }
     });
 
-    $('#final-form').click(e => {
-      const solved = openDoor(doorData[3]);
-      if (solved) {
+    let initialCode = [0,0,0];
+    // $('#final-form').click(e => {
+    //  // const solved = openDoor(doorData[3]);
+    //   if (solved) {
+    //     saveData('stop');
+    //     $('#final-container').hide();
+    //     $('#dancing-wizard').show();
+    //   }
+    // });
+
+    function initializeCryptex() {
+      $('#clue1').click((event) => {
+        const answer = answer1.prev();
+        isFinalSolved(0, answer);
+      });
+      $('#clue2').click((event) => {
+        const answer = answer2.prev();
+        isFinalSolved(1, answer);
+      });
+      $('#clue3').click((event) => {
+        const answer = answer3.prev();
+        isFinalSolved(2, answer);
+      });
+    }
+
+    
+    function isFinalSolved(portal, number) {
+      console.log(portal);
+      console.log(number);
+      const correctAnswer = JSON.stringify([2,0,4]);
+      initialCode[portal] = number;
+      const stringMe = JSON.stringify(initialCode);
+      if (correctAnswer === stringMe) {
         saveData('stop');
-        $('#final-container').hide();
-        $('#dancing-wizard').show();
+         $('#timeContainer').show();
+         $('#final-container').hide();
+         $('#dancing-wizard').show();
+        $('#fireworks').css('display','block');
       }
-    });
+    }
 
     function openDoor(door) {
-      console.log('open door');
-      let lower = $(`#door${door.number}-code`).first().val().toLowerCase();
+      let lower = $(`#door${door.number}-code`).first().val().toLowerCase().replace("'","");
       let password = lower.split(' ').join('');
 
       if ((password === door.password)) {

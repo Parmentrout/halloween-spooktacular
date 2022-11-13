@@ -107,6 +107,19 @@ body{
   to   { transform: translate(0, -0px); }  
 }
 
+.dial {
+  height:35px;
+  width:35px;
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.cryptex-clue {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
 /* Here be confetti */
 .confetti {
   width: 15px;

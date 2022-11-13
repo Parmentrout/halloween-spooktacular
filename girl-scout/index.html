@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Halloween Spooktacular</title>
+        <title>Armentrout Mysteries</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="icon.png">
         <link href="./styles.css" rel="stylesheet">
@@ -12,22 +12,21 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
-      <img src="spiderweb-corner-right.png" id="fixed-div">
+      <!-- <img src="spiderweb-corner-right.png" id="fixed-div"> -->
         <nav class="navbar">
            <a class="mt-2 text-center text-white" data-toggle="modal" href="#" data-target="#helpModal">
-            <!-- <span class="navbar-brand mb-0 h1"><img id="key-logo" class="nav-icon" src="icon.png"></span> -->
             <i class="fas fa-question-circle fa-2x"></i>
             <div>Hints</div>
           </a>
         </nav>
         <div class="container">
             <div class="jumbotron trout-jumbo">
-                <h1>A Halloween Spooktacular!
+                <h1>The Case of Missing Cookies
                 </h1>
                 <p>                 
-                  Jasper the Unassuming Ghost has always stayed to himself and tried to keep out of trouble. 
-                  However, after attending a crazy ghost party he suddenly finds himself locked in a spooky graveyard.  
-                  To make matters worse, it’s also Halloween!
+                 It's that time of the year again, selling Girl Scout Cookies for your troupe. You head to 
+                  your warehouse and find that all of your  cookies have been stolen!  A thief has snatched the cookies and run
+                  off into the night.  You'll need to solve all the clues to catch the dastardly theif and earn your badge.
                   <br>
                 </p>
             </div>
@@ -39,23 +38,26 @@
               <div class="col"></div>
               <div class="col-sm-8">
                 <h4>Puzzle 1</h4>
-                <div class="description">While stumbling through the cemetary, Jasper runs into the ghost of Captain Dirty Beard.
-                   The Grand Captain will guide your way, but first you must solve Puzzle 1.</div>
+                <div class="description">In searching the warehouse, you find a fingerprint among the boxes.  It turns out
+                  the thief needed a mid-heist snack and left evidence behind.
+                  Solve Clue 1 and enter it here to get one step closer to finding the cookies.</div>
               </div>
               <div class="col"></div>
             </div>
             <div class="row mt-4">
               <div class="col"></div>
               <div class="col mb-4">
-                <i class="fas fa-ghost giphy floating text-center"></i>
+                <i class="fas fa-user-secret giphy text-center"></i>
               </div>
               <div class="col mb-4">
-                  <i class="fas fa-skull-crossbones giphy text-center"></i>
+                  <i class="fas fa-cookie-bite giphy text-center"></i>
                   <div class="form-inline justify-content-center gimme-space-top">
                     <input id="door1-code" type="text" class="form-control mr-1 key-input" placeholder="Puzzle 1">
                   </div>
                   <div class="form-inline justify-content-center mt-2">
-                    <button id="door1-form" type="submit" class="btn btn-sm btn-primary"><span class="target">Unlock!</span></button>
+                    <button id="door1-form" type="submit" class="btn btn-sm btn-primary">
+                      <span class="target">Unlock!</span>
+                    </button>
                   </div>
                   <p id="door1Error" class="text-center error-message mt-sm-1">Incorrect code!</p>
               </div>
@@ -68,12 +70,10 @@
               <div class="col"></div>
               <div class="col-sm-8">
                 <h4>Puzzle 2</h4>
-                <div class="description">Correct! The good captain leads you through the cemetery.
-                  But before you get too far, you run right into a pungent witch!
-                  <br>
-                  She cackles in the moonlight and forces you to solve Puzzle 2 before you are allowed to pass!  But wait, you'll need this:
+                <div class="description">You stumble upon a campfire where the thief clearly stayed overnight.  Solve
+                  the next clue to discover where he went next.  Oh and you'll need this:
                   <br><br>
-                  <audio src="spooky_morse.wav" controls>
+                  <audio src="morse_gs.wav" controls>
                     Your browser does not support the
                     <code>audio</code> element.
                   </audio>
@@ -84,10 +84,10 @@
             <div class="row mt-4">
               <div class="col"></div>
               <div class="col mb-4">
-                <i class="fas fa-ghost giphy floating text-center"></i>
+                <i class="fas fa-user-secret giphy text-center"></i>
               </div>
               <div class="col mb-4">
-                  <i class="fas fa-broom giphy text-center"></i>
+                  <i class="fas fa-fire giphy text-center"></i>
                   <div class="form-inline justify-content-center gimme-space-top">
                     <input id="door2-code" type="text" class="form-control mr-1 key-input" placeholder="Puzzle 2">
                   </div>
@@ -105,10 +105,8 @@
               <div class="col"></div>
               <div class="col-sm-8">
                 <h4>Puzzle 3</h4>
-                <div class="description">Phew! You made it past the smelly witch.  For an unassuming ghost this is turning into quite the adventure.
-                  <br>
-                  Luckily, you can see the gate ahead. You start to float over before a giant spider blocks your path!
-                  He wants to play a final Halloween Game (popular with children).  Solve puzzle 3 and write the name of the game below to pass!
+                <div class="description">You are getting closer, you see some tracks next to the campfire.  As you
+                  follow, they lead to Mount _____ .  Clearly this is the thief's hideout.  Solve the name of the mountain to continue.
                 </div>
               </div>
               <div class="col"></div>
@@ -116,10 +114,10 @@
             <div class="row mt-4">
               <div class="col"></div>
               <div class="col mb-4">
-                <i class="fas fa-ghost giphy floating text-center"></i>
+                <i class="fas fa-user-secret giphy text-center"></i>
               </div>
               <div class="col mb-4">
-                  <i class="fas fa-spider giphy text-center"></i>
+                  <i class="fas fa-mountain giphy text-center"></i>
                   <div class="form-inline justify-content-center gimme-space-top">
                     <input id="door3-code" type="text" class="form-control mr-1 key-input" placeholder="Puzzle 3">
                   </div>
@@ -137,24 +135,36 @@
               <div class="col"></div>
               <div class="col-sm-8">
                 <div class="description text-center">
-                  You've done it!  But booo, the cemetary door is locked!  Luckily, Captain Smelly Beard left a note for himself in case he 
-                  ever locked himself out...   
+                  You've done it, and tracked the thief all the way to his secret lair.  But alas, it's locked behind this secret code.  
+                  Solve below to open the final door.
+                  <br>
+                  <i>*Click each icon below to spin the dial</i>
                   <br><br>
-                   <img src="pirate_note.jpg" class="img img-fluid sticky-note">
+                   <div id="clue1" class="dial">
+                    <div class="cryptex-clue"><i class="fa fa-fire fa-2x"></i></div>
+                    <div class="cryptex-clue"><i class="fas fa-key fa-2x"></i></div>
+                    <div class="cryptex-clue"><i class="fas fa-cookie-bite fa-2x"></i></div>
+                    <div class="cryptex-clue"><i class="fas fa-book fa-2x"></i></div>
+                    <div class="cryptex-clue"><i class="fas fa-mountain fa-2x"></i></div>
+                    <div class="cryptex-clue"><i class="fas fa-hippo fa-2x"></i></div>
+                    </div>
+                    <div id="clue2" class="dial">
+                      <div class="cryptex-clue"><i class="fa fa-fire fa-2x"></i></div>
+                      <div class="cryptex-clue"><i class="fas fa-key fa-2x"></i></div>
+                      <div class="cryptex-clue"><i class="fas fa-cookie-bite fa-2x"></i></div>
+                      <div class="cryptex-clue"><i class="fas fa-book fa-2x"></i></div>
+                      <div class="cryptex-clue"><i class="fas fa-mountain fa-2x"></i></div>
+                      <div class="cryptex-clue"><i class="fas fa-hippo fa-2x"></i></div>
+                    </div>
+                    <div id="clue3" class="dial">
+                      <div class="cryptex-clue"><i class="fa fa-fire fa-2x"></i></div>
+                      <div class="cryptex-clue"><i class="fas fa-key fa-2x"></i></div>
+                      <div class="cryptex-clue"><i class="fas fa-cookie-bite fa-2x"></i></div>
+                      <div class="cryptex-clue"><i class="fas fa-book fa-2x"></i></div>
+                      <div class="cryptex-clue"><i class="fas fa-mountain fa-2x"></i></div>
+                      <div class="cryptex-clue"><i class="fas fa-hippo fa-2x"></i></div>
+                    </div>
                 </div>
-              </div>
-              <div class="col"></div>
-            </div>
-            <div class="row mt-2">
-              <div class="col"></div>
-              <div class="col mb-4">
-                  <div class="form-inline justify-content-center gimme-space-top">
-                    <input id="door4-code" type="text" class="form-control mr-1 key-input" placeholder="Gate Code">
-                  </div>
-                  <div class="form-inline justify-content-center mt-2">
-                    <button id="final-form" type="submit" class="btn btn-sm btn-primary"><span class="target">Unlock!</span></button>
-                  </div>
-                  <p id="finalError" class="text-center error-message mt-sm-1">Incorrect code!</p>
               </div>
               <div class="col"></div>
             </div>
@@ -179,11 +189,12 @@
               <div class="confetti"></div>
               <div class="col text-center">
                 <div class="description text-center">
-                  You have escaped the graveyard!  Thanks for playing the Armentrout Mysteries Halloween Spooktacular!
+                  You have solved the mystery and earned your badge! 
+                  Thanks for playing the Case of the Missing Cookies!
                 </div>
                 <p>Time spent: <b><span id="totalTime"></span></b></p>
                 <br><br>
-                <img class="dancing_wizard" src="ghost_wizard.gif">
+                <img class="dancing_wizard" src="badge.png">
               </div>
             </div>
           </div>
@@ -199,15 +210,15 @@
         <div id="emailModal" class="modal" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
-              <div class="modal-header"><h4 class="modal-title">Login to get started!</h4></div>
+              <div class="modal-header"><h4 class="modal-title">Welcome!</h4></div>
               <div class="modal-body">
-                <h5>Thank you for playing the greatest Spooktacular of 2021!  Please input your email below:
+                <h5>To get started please input your name below:
                 </h5>
                 <hr>
                 <form id="loginForm" class="mt-2" onsubmit="return false;">
                   <div class="form-group">
-                    <label for="email">Email address:</label>
-                    <input id="emailInput" type="email" class="form-control" placeholder="Enter email" id="email" required>
+                    <label for="email">Your name:</label>
+                    <input id="emailInput" type="test" class="form-control" placeholder="Enter name" id="email" required>
                   </div>
                   <div class="form-group form-check">
                     <label class="form-check-label">
@@ -319,6 +330,8 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="node_modules/jquery-slotmachine/dist/slotmachine.min.js"></script>
+        <script src="node_modules/jquery-slotmachine/dist/jquery.slotmachine.min.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
