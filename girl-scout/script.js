@@ -50,17 +50,17 @@ $(() => {
     // If you are reading this, it is cheating.  I'm not mad, just disappointed...
     const doorData = [{
       number: 1,
-      password: 'thinmints',
+      passwords: ['thinmints','thinmint'],
       solved: false
     },
     {
       number: 2,
-      password: 'smores',
+      passwords: ['smores','smore'],
       solved: false
     },
     {
       number: 3,
-      password: 'samoa',
+      passwords: ['samoa','samoas'],
       solved: false
     }];
 
@@ -135,8 +135,7 @@ $(() => {
     function openDoor(door) {
       let lower = $(`#door${door.number}-code`).first().val().toLowerCase().replace("'","");
       let password = lower.split(' ').join('');
-
-      if ((password === door.password)) {
+      if (door.passwords.includes(password)) {
         door.solved = true;
         hideError(door.number);
       } else {
